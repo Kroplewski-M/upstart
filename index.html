@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
     <link rel="icon" type="image/png" sizes="32x32" href="./resources/favicon-32x32.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -15,7 +17,7 @@
     <title>Upstart</title>
 </head>
 <body class="bg font-[Gulzar] text-gray-200">
-    <div class="md:w-[100%] w-[350px] min-w-[320px] h-[auto] border-2 border-solid border-transparent mx-auto text-center">
+    <div class="md:w-[100%] w-[350px] min-w-[320px] h-[auto] border-2 border-solid border-transparent mx-auto text-center ">
         <div class="md:w-[100%] w-[350px] absolute">
             <div class="md:w-[100%] w-[350px] h-[100%] bg absolute z-10 "></div>
             <img src="./resources/background.jpg" alt="" class="w-[100%]">
@@ -24,7 +26,7 @@
              <p class="md:text-[120px] md:pt-[80px] text-[35px] font-bold drop-shadow-lg">Upstart</p>
             <p class="md:text-[40px] md:italic md:font-light text-[14px]">taking your business to the next level</p>
         </div>
-    <div class=" md:mt-0 lg:mt-[25vw] mt-[130px] bg-[url('./resources/about.svg')] bg-no-repeat bg-contain bg-right">
+    <div class=" md:mt-0 lg:mt-[25vw] mt-[130px] xl:mt-[650px] 2xl:mt-[45vw] bg-[url('./resources/about.svg')] bg-no-repeat bg-contain bg-right">
         <p class="text-[20px] md:text-[70px] underline drop-shadow-md">ABOUT</p>
         <p class="w-[80%] md:w-[600px] mx-auto md:text-[25px] mt-[10px] tracking-wider drop-shadow-md"> At UpStart we optimize online business profiles to help gain more customers
              and possible leads for our clients, we strive to offer a simple, high quality
@@ -41,7 +43,7 @@
             <li class="mt-[5px]">- Website development</li>
         </ul>
     </div>
-    <div class="flex flex-wrap w-100% h-[auto] space-x-10 mx-auto">
+    <div class="flex flex-wrap w-100% h-[auto] space-x-10 place-content-center">
         <div class="w-[400px] h-[550px] border-solid border-2 border-white rounded-lg ml-10 mt-10 text-left">
             <p class="text-[60px] underline text-center">Basic</p>
             <ul class="text-[30px] drop-shadow-xl">
@@ -86,10 +88,10 @@
         <fieldset class="border-solid border-2 border-gray-100 rounded-lg w-[300px] md:w-[700px] mx-auto">
             <legend class="md:text-[45px]">Contact</legend>
             <form class="text-black">
-                <input type="text" placeholder="Name" class="w-[200px] md:text-[25px] md:w-[400px] md:h-[60px] h-[30px] rounded-md">
-                <input type="email" placeholder="Email" class="w-[200px]  md:text-[25px] md:w-[400px] md:h-[60px] h-[30px] rounded-md mt-[10px]">
-                <textarea name="Msg" id="msg" cols="30" rows="5" placeholder="Message" class="mt-[10px] rounded-md  md:text-[25px] md:w-[400px] md:h-[110px]"></textarea><br>
-                <button class="w-[100px] md:w-[200px] md:h-[50px] h-[30px] mt-[10px] bg-green-500 hover:bg-green-600 rounded-md border-solid border-2 border-black">Send</button>
+                <input required name="name" id="fullName" type="text" placeholder="Name" class="w-[200px] md:text-[25px] md:w-[400px] md:h-[60px] h-[30px] rounded-md">
+                <input required name="email" id="email_id" type="email" placeholder="Email" class="w-[200px]  md:text-[25px] md:w-[400px] md:h-[60px] h-[30px] rounded-md mt-[10px]">
+                <textarea required name="email" id="message" name="Msg" id="msg" cols="30" rows="5" placeholder="Message" class="mt-[10px] rounded-md  md:text-[25px] md:w-[400px] md:h-[110px]"></textarea><br>
+                <button id="btnEmail" class="w-[100px] md:w-[200px] md:h-[50px] h-[30px] mt-[10px] bg-green-500 hover:bg-green-600 rounded-md border-solid border-2 border-black">Send</button>
             </form>
         </fieldset>
     </div>
